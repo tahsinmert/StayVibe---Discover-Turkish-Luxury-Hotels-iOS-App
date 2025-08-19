@@ -20,22 +20,24 @@
 ## ✨ Features
 
 ### 🎯 Core Features
-- **🏨 Luxury Hotel Discovery** - Explore premium Turkish hotels with detailed information
-- **🔍 Smart Search & Filtering** - Find hotels by location, amenities, and preferences
-- **⭐ Real-time Reviews & Ratings** - Authentic guest experiences and ratings
+- **🏨 Luxury Hotel Discovery** - Explore premium Turkish hotels like Çırağan Palace Kempinski
+- **🔍 Smart Search & Filtering** - Search by hotel name, city, or destination with Turkish language support
+- **⭐ Real-time Reviews & Ratings** - Authentic guest experiences with star ratings
 - **📱 Cross-Platform** - Seamless experience on iOS, Android, and Web
-- **🌍 Location Services** - GPS-based hotel recommendations
-- **💳 Booking Management** - Complete booking flow with confirmation
-- **❤️ Favorites System** - Save and manage your preferred hotels
-- **📊 Weather Integration** - Real-time weather data for better planning
+- **🌍 Location Services** - GPS-based hotel recommendations with detailed addresses
+- **💳 Booking Management** - Complete booking flow with availability status
+- **❤️ Favorites System** - Save and manage your preferred hotels with heart icons
+- **📊 Weather Integration** - Real-time weather data for better travel planning
+- **🏖️ Turkish Destinations** - Focus on premium locations like İstanbul, Antalya, and more
 
 ### 🎨 UI/UX Excellence
-- **Material Design 3** - Modern, intuitive interface
+- **Material Design 3** - Modern, intuitive interface with Turkish localization
 - **Smooth Animations** - Flutter Staggered Animations for premium feel
-- **Dark/Light Theme** - Adaptive theming system
+- **Tropical Theme** - Beautiful beach backgrounds and luxury aesthetics
 - **Responsive Design** - Optimized for all screen sizes
 - **Loading States** - Shimmer effects and skeleton screens
 - **Error Handling** - Graceful error states with retry options
+- **Turkish Language Support** - Full localization with Turkish text and currency (₺)
 
 ### 🚀 Technical Features
 - **State Management** - Provider pattern for efficient state handling
@@ -43,6 +45,7 @@
 - **Caching** - Image caching and data persistence
 - **Offline Support** - Basic offline functionality
 - **Performance** - Optimized for smooth 60fps experience
+- **Location Services** - Integration with geolocation and geocoding
 
 ---
 
@@ -50,13 +53,26 @@
 
 <div align="center">
 
-| Splash Screen | Home Page | Hotel Details |
-|:---:|:---:|:---:|
-| ![Splash](assets/images/splash.png) | ![Home](assets/images/home.png) | ![Details](assets/images/details.png) |
+### 🌅 Splash Screen
+![Splash Screen](assets/images/anasayfa-arka-plan.png)
 
-| Search Results | Booking Flow | Profile |
-|:---:|:---:|:---:|
-| ![Search](assets/images/search.png) | ![Booking](assets/images/booking.png) | ![Profile](assets/images/profile.png) |
+*Beautiful tropical beach backdrop with StayVibe branding and Turkish tagline "En iyi otelleri keşfedin" (Discover the best hotels)*
+
+### 🏨 Main Interface
+![Main Interface](assets/images/plaj-photo.jpeg)
+
+*Luxury hotel discovery with Çırağan Palace Kempinski featuring Ottoman palace architecture and Bosphorus views*
+
+### 📱 App Features Showcase
+
+| Feature | Description |
+|:---:|:---:|
+| **🔍 Smart Search** | Turkish language search: "Otel, şehir veya destinasyon ar..." |
+| **🏷️ Filter System** | Location-based filters: Tümü, İstanbul, Antalya |
+| **⭐ Hotel Cards** | Detailed cards with availability status, ratings, and pricing |
+| **📍 Location Tags** | Precise addresses like "Çırağan Caddesi 32, Beşiktaş, İstanbul" |
+| **💰 Pricing** | Turkish Lira pricing with per-night rates (₺2500/gece) |
+| **❤️ Favorites** | Heart icons for saving preferred hotels |
 
 </div>
 
@@ -153,6 +169,7 @@ StayVibe integrates with multiple APIs for comprehensive hotel data:
 - **OpenStreetMap API** - Location and mapping data
 - **Custom Hotel API** - Luxury hotel information
 - **Weather API** - Real-time weather conditions
+- **Turkish Hotels Database** - Local hotel information
 
 ### API Endpoints
 ```dart
@@ -163,6 +180,9 @@ GET /hotels/search - Search hotels
 
 // Weather endpoints
 GET /weather/{location} - Get weather data
+
+// Location endpoints
+GET /geocode/{address} - Geocoding services
 ```
 
 ---
@@ -179,6 +199,9 @@ Color accentColor = Color(0xFF007AFF);
 
 // Custom fonts
 FontFamily: GoogleFonts.poppins().fontFamily
+
+// Turkish localization
+Locale('tr', 'TR') - Turkish language support
 ```
 
 ### Adding New Features
@@ -189,12 +212,33 @@ FontFamily: GoogleFonts.poppins().fontFamily
 
 ---
 
+## 🏖️ Turkish Luxury Hotels
+
+StayVibe specializes in premium Turkish hospitality:
+
+### Featured Destinations
+- **İstanbul** - Historic luxury with Bosphorus views
+- **Antalya** - Mediterranean coastal resorts
+- **Cappadocia** - Unique cave hotels
+- **Bodrum** - Aegean Sea luxury
+- **Fethiye** - Turquoise Coast elegance
+
+### Hotel Categories
+- **🏰 Palace Hotels** - Ottoman heritage luxury
+- **🏖️ Beach Resorts** - Coastal paradise
+- **🏔️ Mountain Retreats** - Natural beauty
+- **🏛️ Historic Hotels** - Cultural experiences
+
+---
+
 ## 📊 Performance Metrics
 
 - **App Size**: ~25MB (iOS) / ~15MB (Android)
 - **Startup Time**: <2 seconds
 - **Memory Usage**: <100MB average
 - **Battery Impact**: Minimal background processing
+- **Image Loading**: Optimized with caching
+- **Search Response**: <500ms average
 
 ---
 
@@ -222,6 +266,7 @@ We welcome contributions! Please follow these steps:
 - Write clean, documented code
 - Add tests for new features
 - Maintain consistent code style
+- Support Turkish localization
 
 ---
 
@@ -235,8 +280,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Flutter Team** - For the amazing framework
 - **Material Design** - For design guidelines
-- **Turkish Tourism** - For inspiration
+- **Turkish Tourism** - For inspiration and hotel data
 - **Open Source Community** - For various packages
+- **Çırağan Palace Kempinski** - Featured luxury hotel
 
 ---
 
@@ -245,6 +291,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Email**: support@stayvibe.com
 - **Website**: [stayvibe.com](https://stayvibe.com)
 - **Documentation**: [docs.stayvibe.com](https://docs.stayvibe.com)
+- **Turkish Support**: Türkçe destek mevcut
 
 ---
 
