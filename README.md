@@ -53,26 +53,9 @@
 
 <div align="center">
 
-### 🌅 Splash Screen
-![Splash Screen](assets/images/anasayfa-arka-plan.png)
-
-*Beautiful tropical beach backdrop with StayVibe branding and Turkish tagline "En iyi otelleri keşfedin" (Discover the best hotels)*
-
-### 🏨 Main Interface
-![Main Interface](assets/images/plaj-photo.jpeg)
-
-*Luxury hotel discovery with Çırağan Palace Kempinski featuring Ottoman palace architecture and Bosphorus views*
-
-### 📱 App Features Showcase
-
-| Feature | Description |
+| Splash Screen | Main Page |
 |:---:|:---:|
-| **🔍 Smart Search** | Turkish language search: "Otel, şehir veya destinasyon ar..." |
-| **🏷️ Filter System** | Location-based filters: Tümü, İstanbul, Antalya |
-| **⭐ Hotel Cards** | Detailed cards with availability status, ratings, and pricing |
-| **📍 Location Tags** | Precise addresses like "Çırağan Caddesi 32, Beşiktaş, İstanbul" |
-| **💰 Pricing** | Turkish Lira pricing with per-night rates (₺2500/gece) |
-| **❤️ Favorites** | Heart icons for saving preferred hotels |
+| ![StayVibe Splash](assets/screenshots/stayvibe-app-start-page.png) | ![StayVibe Main](assets/screenshots/stayvibe-app-main-page.png) |
 
 </div>
 
