@@ -5,18 +5,16 @@ import 'package:flutter/material.dart';
 class HotelReviewTab extends StatelessWidget {
   final List<Review> reviews;
   const HotelReviewTab({
-    Key key,
-    this.reviews,
+    Key? key,
+    required this.reviews,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16),
-      child: ListView.builder(
-        itemCount: reviews.length,
-        itemBuilder: (context, index) => ReviewItem(review: reviews[index]),
-      ),
+    return ListView.builder(
+      padding: EdgeInsets.only(bottom: 100), // Bottom padding for booking bar
+      itemCount: reviews.length,
+      itemBuilder: (context, index) => ReviewItem(review: reviews[index]),
     );
   }
 }

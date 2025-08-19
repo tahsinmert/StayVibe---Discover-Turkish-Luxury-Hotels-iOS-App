@@ -9,41 +9,34 @@ class HotelModel {
   List<Amenitie> amenities;
 
   HotelModel({
-    this.name,
-    this.address,
-    this.imageUrl,
-    this.rooms,
-    this.reviews,
-    this.price,
-    this.description,
-    this.amenities,
+    required this.name,
+    required this.address,
+    required this.imageUrl,
+    required this.rooms,
+    required this.reviews,
+    required this.price,
+    required this.description,
+    required this.amenities,
   });
 
-  HotelModel.fromJson(Map<String, dynamic> json) {
-    name = json['name'];
-    price = json['price'];
-    description = json['description'];
-    imageUrl = json['imageUrl'];
-    address = json['address'];
-    if (json['rooms'] != null) {
-      rooms = <Room>[];
-      json['rooms'].forEach((v) {
-        rooms.add(Room.fromJson(v));
-      });
-    }
-    if (json['reviews'] != null) {
-      reviews = <Review>[];
-      json['reviews'].forEach((v) {
-        reviews.add(Review.fromJson(v));
-      });
-    }
-    if (json['amenities'] != null) {
-      amenities = <Amenitie>[];
-      json['amenities'].forEach((v) {
-        amenities.add(Amenitie.fromJson(v));
-      });
-    }
-  }
+  HotelModel.fromJson(Map<String, dynamic> json)
+      : name = json['name'] ?? '',
+        price = json['price'] ?? 0,
+        description = json['description'] ?? '',
+        imageUrl = json['imageUrl'] ?? '',
+        address = json['address'] ?? '',
+        rooms = (json['rooms'] as List<dynamic>?)
+                ?.map((v) => Room.fromJson(v))
+                .toList() ??
+            <Room>[],
+        reviews = (json['reviews'] as List<dynamic>?)
+                ?.map((v) => Review.fromJson(v))
+                .toList() ??
+            <Review>[],
+        amenities = (json['amenities'] as List<dynamic>?)
+                ?.map((v) => Amenitie.fromJson(v))
+                .toList() ??
+            <Amenitie>[];
 
   Map<String, dynamic> toJson() {
     final data = <String, dynamic>{};
@@ -52,15 +45,9 @@ class HotelModel {
     data['description'] = description;
     data['address'] = address;
     data['imageUrl'] = imageUrl;
-    if (rooms != null) {
-      data['rooms'] = rooms.map((v) => v.toJson()).toList();
-    }
-    if (reviews != null) {
-      data['reviews'] = reviews.map((v) => v.toJson()).toList();
-    }
-    if (amenities != null) {
-      data['amenities'] = amenities.map((v) => v.toJson()).toList();
-    }
+    data['rooms'] = rooms.map((v) => v.toJson()).toList();
+    data['reviews'] = reviews.map((v) => v.toJson()).toList();
+    data['amenities'] = amenities.map((v) => v.toJson()).toList();
     return data;
   }
 }
@@ -69,12 +56,11 @@ class Room {
   String imageUrl;
   String name;
 
-  Room({this.imageUrl, this.name});
+  Room({required this.imageUrl, required this.name});
 
-  Room.fromJson(Map<String, dynamic> json) {
-    imageUrl = json['imageUrl'];
-    name = json['name'];
-  }
+  Room.fromJson(Map<String, dynamic> json)
+      : imageUrl = json['imageUrl'] ?? '',
+        name = json['name'] ?? '';
 
   Map<String, dynamic> toJson() {
     final data = <String, dynamic>{};
@@ -91,18 +77,17 @@ class Review {
   int rate;
 
   Review({
-    this.message,
-    this.user,
-    this.userImage,
-    this.rate,
+    required this.message,
+    required this.user,
+    required this.userImage,
+    required this.rate,
   });
 
-  Review.fromJson(Map<String, dynamic> json) {
-    message = json['message'];
-    user = json['user'];
-    userImage = json['userImage'];
-    rate = json['rate'];
-  }
+  Review.fromJson(Map<String, dynamic> json)
+      : message = json['message'] ?? '',
+        user = json['user'] ?? '',
+        userImage = json['userImage'] ?? '',
+        rate = json['rate'] ?? 0;
 
   Map<String, dynamic> toJson() {
     final data = <String, dynamic>{};
@@ -118,12 +103,11 @@ class Amenitie {
   String name;
   String imageUrl;
 
-  Amenitie({this.name, this.imageUrl});
+  Amenitie({required this.name, required this.imageUrl});
 
-  Amenitie.fromJson(Map<String, dynamic> json) {
-    name = json['name'];
-    imageUrl = json['imageUrl'];
-  }
+  Amenitie.fromJson(Map<String, dynamic> json)
+      : name = json['name'] ?? '',
+        imageUrl = json['imageUrl'] ?? '';
 
   Map<String, dynamic> toJson() {
     final data = <String, dynamic>{};

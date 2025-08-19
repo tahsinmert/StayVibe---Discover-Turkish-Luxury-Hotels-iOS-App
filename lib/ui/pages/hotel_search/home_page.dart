@@ -15,8 +15,8 @@ class HotelSearchPage extends StatelessWidget {
 
 class HotelListBody extends StatelessWidget {
   const HotelListBody({
-    Key key,
-    @required this.hotelBloc,
+    Key? key,
+    required this.hotelBloc,
   }) : super(key: key);
 
   final HotelBloc hotelBloc;
@@ -26,7 +26,7 @@ class HotelListBody extends StatelessWidget {
     if (hotelBloc.failure != null) {
       return Center(child: Text(hotelBloc.failure.toString()));
     }
-    if (hotelBloc.hotels == null) {
+    if (hotelBloc.hotels.isEmpty) {
       return Center(child: CircularProgressIndicator());
     }
     return Column(

@@ -5,13 +5,14 @@ import 'package:flutter/material.dart';
 class HotelRoomTab extends StatelessWidget {
   final List<Room> rooms;
   const HotelRoomTab({
-    Key key,
-    this.rooms,
+    Key? key,
+    required this.rooms,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: EdgeInsets.only(bottom: 100), // Bottom padding for booking bar
       itemCount: rooms.length,
       itemBuilder: (context, index) => RoomItem(room: rooms[index]),
     );
