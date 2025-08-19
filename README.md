@@ -53,9 +53,9 @@
 
 <div align="center">
 
-| Splash Screen | Main Page |
-|:---:|:---:|
-| ![StayVibe Splash](assets/screenshots/stayvibe-app-start-page.png) | ![StayVibe Main](assets/screenshots/stayvibe-app-main-page.png) |
+| Splash | Home | Book Now | Confirm Booking |
+|:---:|:---:|:---:|:---:|
+| ![StayVibe Splash](assets/screenshots/stayvibe-app-start-page.png) | ![StayVibe Home](assets/screenshots/stayvibe-app-main-page.png) | ![Book Now](assets/screenshots/stayvibe-app-booknow.png) | ![Confirm Booking](assets/screenshots/stayvibe-app-confirmbooking.png) |
 
 </div>
 
